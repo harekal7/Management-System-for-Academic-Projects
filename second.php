@@ -6,6 +6,8 @@
 <body>
 <?php
 session_start();
+echo "<a href='logout.php'>Log Out</a>";
+echo "<br><br>";
 if ($_SESSION['is_logged_in'] == 0 )
 {
     header("Location:index.php");
