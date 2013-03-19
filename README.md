@@ -1,0 +1,4 @@
+Management-System-for-Academic-Projects
+=======================================
+
+The present era involves in having projects done in every domain in every institution or organization. The type of projects include academic projects, projects done as a part of competitions, open source projects and many more. But there is no software which can be used to know about all these projects; all at one place.  A Project Management portal is a piece of software which provides a place where students can refer to all the projects done in the college so that they get an idea on how to go about with their project and also to choose the domain for their project. Since this will be hosted on the web, students can access and refer projects on the go.
