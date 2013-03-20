@@ -33,6 +33,7 @@ else
 {
 	header("location:logout.php");
 }
+mysqli_close($con);
 ?>
 
 </body>

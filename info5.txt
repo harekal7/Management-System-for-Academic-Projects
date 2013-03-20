@@ -1,0 +1,1 @@
+In the subfield of numerical analysis, a sparse matrix is a matrix populated primarily with zeros as elements of the table. Conceptually, sparsity corresponds to systems which are loosely coupled.

@@ -1,0 +1,198 @@
+#hr1{
+	
+	height:5px;
+	background-color: black;
+}
+
+#hr2{
+	position:relative;
+	top: 750px;
+	height:5px;
+	background-color: black;
+}
+
+#welcome{
+
+	font-family: serif;
+	font-size: 80px;
+	position: fixed;
+	top: 25px;
+	left: 700px;
+	color: white;
+}
+
+#body1{
+
+	position: absolute;
+	top: 160px;
+	width: 1200px;
+	height: 700px;
+	background-color: honeydew;
+}
+
+#body2{
+
+	position: absolute;
+	top: 160px;
+	left: 1210px;
+	width: 700px;
+	height: 700px;
+	background-color: lavender;
+}
+
+#header{
+	
+	
+	width: 1900px;
+	height: 150px;
+	background-color: black;	
+}
+
+#footer{
+	
+	position: relative;
+	top: 705px;
+	width: 1900px;
+	height: 40px;
+	background-color: gray;
+}
+
+#vertical-line{
+	
+	position: relative;
+	top: 130px;
+	left: 1200px;
+	width: 5px;
+	height: 620px;
+	background-color: black;
+	float: left;	
+}
+
+#login{
+
+	background-color: #ADD8E6;
+	position: absolute;
+	top: 100px;
+	left: 150px;
+	width: 400px;
+	height: 300px;
+	border-radius: 20px;
+	border-style: solid;
+}
+
+#logincontainer{
+
+	position: absolute;
+	top: 50px;
+}
+
+
+#Name{
+
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	font-size: 25px;
+}
+
+#name{
+
+	position: absolute;
+	top: 40px;
+	left: 10px;
+	width: 300px;
+	height: 20px;
+	font-size: 20px;
+}
+
+#Pass{
+
+	position: absolute;
+	top: 80px;
+	left: 15px;
+	font-size: 25px;
+}
+
+#pass{
+
+	position: absolute;
+	top: 110px;
+	left: 10px;
+	width: 300px;
+	height: 20px;
+	font-size: 20px;
+}
+
+
+#hrinlogin{
+
+	height: 2px;
+	background-color: black;
+	position: relative;
+	top: 5px;
+	
+}
+
+#hrinlogin2{
+
+	height: 2px;
+	background-color: black;
+	position: relative;
+	top: 200px;
+	
+}
+
+#a_s{
+
+	font-size: 25px;
+	color: black;
+	position: relative;
+	left: 80px;
+	top: 5px;
+}
+
+#send{
+	
+	position: absolute;
+	top: 150px;
+	left: 10px;
+	width: 80px;
+	height: 30px;
+	background-color: #2E9AFE;
+	border-color: #2E64FE;
+	font-size: 18px;
+}
+
+#signup{
+
+	position: absolute;
+	top: 206px;
+	left: 110px;
+	width: 170px;
+	height: 40px;
+	font-size: 22px;
+	background-color: transparent;
+	border-color: transparent;
+	color: #08088A
+}
+
+#welcome_message{
+	
+	font-size: 60px;
+	text-align: center;
+	font-family: cursive;
+	
+}
+
+#welcome_body{
+	
+	text-indent: 4em;
+	width: 520px;
+	font-size: 20px;
+	
+}
+
+#signup_font{
+
+	font-size: 40px;
+}

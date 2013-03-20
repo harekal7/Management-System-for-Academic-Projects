@@ -1,15 +1,19 @@
 <html>
 
 <head>
+    <title>Portal</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 <?php
+
 echo "<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Management System for Academic Projects</h2><br><br>";
+
 session_start();
 echo '<a href="logout.php">Log Out</a>';
 echo "<br><br>";

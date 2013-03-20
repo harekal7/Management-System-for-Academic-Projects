@@ -22,22 +22,23 @@ echo '<a href="logout.php">Log Out</a>
 	</div>
 </div>
 
+
 <div id="body2">
-<form action="login.php" method="post">
 	<div id="login">
-		<div id="a_s">Login as admin/student</div>
-		<hr id="hrinlogin">
-		<div id="logincontainer">
-			<div id="Username">Name</div> 
-			<input id="name" name="name" type="text"/>
-			<div id="Pass">Password</div> 
-			<input id="pass" name="pass" type="password"/>
-			<a href="signup.html"><input id="signup" type="button" value="Sign Up"/></a>
-			<input id="send" type="submit" value="Login"/>
-		</div>
+		<form action="login.php" method="post">
+			<div id="a_s">Login as admin/student</div>
+			<hr id="hrinlogin">
+			<div id="logincontainer">
+				<div id="Username">Name</div> 
+				<input id="name" name="name" type="text"/>
+				<div id="Pass">Password</div> 
+				<input id="pass" name="pass" type="password"/>
+				<a href="signup.html"><input id="signup" type="button" value="Sign Up"/></a>
+				<input id="send" type="submit" value="Login"/>
+			</div>
+		</form>
 		<hr id="hrinlogin2">
 	</div>
-</form>
 </div>
 
 <div id="footer"></div>';
