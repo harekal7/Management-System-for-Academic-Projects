@@ -7,11 +7,17 @@
 
 <?php
 $usn = $_POST['usn'];
-echo $usn;
+$email = $_POST['email'];
 $passwd = md5($_POST['pass']);
 $dob = $_POST['dob'];
 $gender = $_POST['gender'];
 $phone = $_POST['phone'];
+$gender = (string)$gender;
+$g = 1;
+if (strcmp($gender,"Male"))
+{	
+	$g = 0;
+}
 
 $con=mysqli_connect("localhost","root","a","projects");
 
@@ -33,10 +39,17 @@ if(mysqli_num_rows($result) == 1)
 }
 else
 {
-	echo mysqli_num_rows($result);
-	echo 'Updating Database';
-	//update DB;
+
+	$sql="INSERT INTO users (usn, passwd, email, usertype, DOB, gender, phone) VALUES
+	('$usn', '$passwd', '$email', 'user', '$dob', '$g', '$phone')";
+
+	if (!mysqli_query($con,$sql))
+	{
+	  die('Error: ' . mysqli_error());
+	}
+	header("location:index.php");
 }
+
 mysqli_close($con);
 ?>
 

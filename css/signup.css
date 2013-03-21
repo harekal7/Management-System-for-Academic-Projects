@@ -1,0 +1,36 @@
+#table_container{
+
+	position: absolute;
+	left: 28%;
+	top: 10%;
+	background-color: #ADD8E6;
+	height: 60%;
+
+}
+
+#signup_name{
+
+	font-size: 0.5em;
+}
+
+#signup_phno{
+
+	font-size: 0.5em;
+}
+
+#signup_font{
+
+	font-size: 2em;
+}
+
+
+#signup{
+
+	position: absolute;
+	background-color: #2E9AFE;
+	top: 89%;
+	left: 77%;
+	border-color: #2E64FE;
+	font-size: 1.2em;
+	
+}

@@ -2,7 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Portal</title>
-	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="css/template.css" rel="stylesheet" type="text/css"/>
+	<link href="css/signup.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript">
+	
+function clicked(){
+
+	
+	elem = document.getElementById("signup_name");
+	alert(elem.value);
+}
+</script>
 </head>
 
 <body>
@@ -12,11 +23,16 @@
 </div>
 
 <div id="body1">
+	<div id="table_container">
 	<form action="newuser.php" method="post">
 	<table summary="Required user information while sigining up" id="signup_table" border="0" cellpadding="6px">
 		<tr id="signup_font">
 			<td>USN</td>
 			<td><input type="text" id="signup_name" name="usn"/></td>
+		</tr>
+		<tr id="signup_font">
+			<td>email</td>
+			<td><input type="text" id="signup_name" name="email"/></td>
 		</tr>
 		<tr id="signup_font">
 			<td>Name</td>
@@ -43,24 +59,6 @@
 				</select>
 			</td>
 		</tr>
-		<!--<tr id="signup_font">
-			<td>Location</td>
-			<td>
-				<select name="country">
-					<option>India</option>
-					<option>England</option>
-					<option>Australia</option>
-					<option>Srilanka</option>
-					<option>Bangladesh</option>
-					<option>West Indies</option>
-					<option>Pakistan</option>
-					<option>United States</option>
-					<option>New Zealand</option>
-					<option>China</option>
-				</select>			
-			</td>
-		</tr>
-		-->
 		<tr id="signup_font">
 			<td>Mobile No</td>
 			<td><input type="text" value="+91 " id="signup_phno" name="phone"/></td>
@@ -70,7 +68,7 @@
 			<td><input type="submit" value="Sign Up" name="Sign Up"/></td>
 		</tr>	
 	</table>
-	</form>
+	</form></div>
 </div>
 
 <div id="body2">
