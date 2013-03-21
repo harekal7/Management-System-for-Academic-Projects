@@ -12,22 +12,27 @@
 </div>
 
 <div id="body1">
+	<form action="newuser.php" method="post">
 	<table summary="Required user information while sigining up" id="signup_table" border="0" cellpadding="6px">
 		<tr id="signup_font">
+			<td>USN</td>
+			<td><input type="text" id="signup_name" name="usn"/></td>
+		</tr>
+		<tr id="signup_font">
 			<td>Name</td>
-			<td><input type="text" id="signup_name"/></td>
+			<td><input type="text" id="signup_name" name="name"/></td>
 		</tr>
 		<tr id="signup_font">
 			<td>Password</td>
-			<td><input type="password" id="signup_name"/></td>
+			<td><input type="password" id="signup_name" name="passwd"/></td>
 		</tr>
 		<tr id="signup_font">
 			<td>Confirm Password</td>
-			<td><input type="password" id="signup_name"/></td>
+			<td><input type="password" id="signup_name" name="cpasswd"/></td>
 		</tr>
 		<tr id="signup_font">
 			<td>Birthday</td>
-			<td><input type="date" id="dob" /></td>
+			<td><input type="date" id="dob" name="dob"/></td>
 		</tr>
 		<tr id="signup_font">
 			<td>Gender</td>
@@ -38,7 +43,7 @@
 				</select>
 			</td>
 		</tr>
-		<tr id="signup_font">
+		<!--<tr id="signup_font">
 			<td>Location</td>
 			<td>
 				<select name="country">
@@ -55,12 +60,17 @@
 				</select>			
 			</td>
 		</tr>
+		-->
 		<tr id="signup_font">
 			<td>Mobile No</td>
-			<td><input type="text" value="+91 " id="signup_phno"/></td>
+			<td><input type="text" value="+91 " id="signup_phno" name="phone"/></td>
 		</tr>
-		
+	
+		<tr id="signup_font">
+			<td><input type="submit" value="Sign Up" name="Sign Up"/></td>
+		</tr>	
 	</table>
+	</form>
 </div>
 
 <div id="body2">

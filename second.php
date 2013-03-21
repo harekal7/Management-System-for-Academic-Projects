@@ -60,14 +60,12 @@ echo "Domain : ";
 echo $row['domain'];
 echo "<br>";echo "<br>";
 
-/*
-$file=fopen("welcome.txt","r") or exit("Unable to open file!");
-while(!feof($file))
-{
-  echo fgets($file). "<br>";
-}
-fclose($file);
-*/
+echo "Project Status : ";
+if ($row['status'] == 0)
+	echo "Not Completed";
+else
+	echo "Completed";
+echo "<br>";echo "<br>";
 
 mysqli_close($con);
 ?>

@@ -16,6 +16,11 @@ Management System for Academic Projects</h2><br><br>";
 
 session_start();
 echo '<a href="logout.php">Log Out</a>';
+echo '<br>';
+
+echo '<a href="upload.html"> <input type="button" name="upload" value="Upload Project"> </a>';
+
+
 echo "<br><br>";
 if ($_SESSION['is_logged_in'] == 0 )
 {
@@ -36,6 +41,7 @@ if (mysqli_error())
    die(mysqli_error());
 }
 
+$i = 1;
 
 while($row = mysqli_fetch_array($result))
 {
@@ -44,8 +50,15 @@ while($row = mysqli_fetch_array($result))
   
   echo "<a href=$path>$name</a>";
   echo "<br />";
-  echo $row['info'];
+  $file=fopen("info".$i.".txt","r") or exit("Unable to open file!");
+  while(!feof($file))
+  {
+    echo fgets($file). "<br>";
+  }
+  $i = $i + 1;
   echo "<br />";echo "<br />";echo "<br />";
+
+
 }
 
 mysqli_close($con);
