@@ -9,7 +9,7 @@
 session_start();
 $_SESSION['is_logged_in'] = 0;
 $username = $_POST['name'];
-$password = $_POST['pass'];
+$password = md5($_POST['pass']);
 
 $con=mysqli_connect("localhost","root","a","projects");
 

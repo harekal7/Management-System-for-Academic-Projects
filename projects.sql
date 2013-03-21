@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 20, 2013 at 03:25 PM
+-- Generation Time: Mar 21, 2013 at 06:00 AM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.6-1ubuntu1.2
 
@@ -67,12 +67,12 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`usn`, `passwd`, `usertype`) VALUES
-('1pi10cs116', '1pi10cs116', 'user'),
-('1pi10cs115', '1pi10cs115', 'user'),
-('1pi10cs105', '1pi10cs105', 'user'),
-('1pi10cs089', '1pi10cs089', 'user'),
-('1pi10cs113', '1pi10cs113', 'user'),
-('8147555550', 'admin', 'admin');
+('1pi10cs116', '787c302218a2e9581a917d3d7a7ac368', 'user'),
+('1pi10cs115', '47e904d1c52e9eb66f584a17aa0f247f', 'user'),
+('1pi10cs105', 'f6c02f372fb1fb4f03f6b54c122de449', 'user'),
+('1pi10cs089', 'ec4f2d42f39101b65c43293a4ac0869c', 'user'),
+('1pi10cs113', '265e1a8386bfab6432aaf414da94aa3b', 'user'),
+('8147555550', 'c9ee7456f835593ff0dbf825fe68b688', 'admin');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
