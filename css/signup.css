@@ -4,16 +4,16 @@
 	left: 28%;
 	top: 10%;
 	background-color: #ADD8E6;
-	height: 60%;
+	height: 70%;
 
 }
 
-#signup_name{
+#username, #confirm_pass, #pass, #email, #usn{
 
 	font-size: 0.5em;
 }
 
-#signup_phno{
+#phone{
 
 	font-size: 0.5em;
 }
@@ -28,9 +28,48 @@
 
 	position: absolute;
 	background-color: #2E9AFE;
-	top: 89%;
-	left: 77%;
+	top: 86%;
+	left: 74%;
 	border-color: #2E64FE;
 	font-size: 1.2em;
-	
+	height:8%;
+	width: 22%;
+}
+
+#signup_text{
+
+	font-size: 2.5em;
+	font-family: cursive;
+	position: absolute;
+	top: 1%;
+	left: 30%;
+	color: #2554C7;
+}
+
+#required{
+
+	font-size: 0.5em;
+	color: red;
+
+}
+
+#required_text{
+
+	font-size: 1.2em;
+	position: absolute;
+	top: 81%;
+	left: 38%;
+	color: red;
+	visibility: hidden;
+}
+
+#matching{
+
+	font-size: 0.5em;
+	position: absolute;
+	top: 33%;
+	left: 60%;
+	color: red;
+	visibility: hidden;
+
 }

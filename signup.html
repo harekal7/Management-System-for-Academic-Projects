@@ -2,16 +2,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Portal</title>
-	<link href="css/template.css" rel="stylesheet" type="text/css"/>
+	<link href="css/template2.css" rel="stylesheet" type="text/css"/>
 	<link href="css/signup.css" rel="stylesheet" type="text/css"/>
 
 <script type="text/javascript">
 	
 function clicked(){
 
+	username = document.getElementById("username");
+	pass = document.getElementById("pass");
+	confirm_pass = document.getElementById("confirm_pass");
+	phone = document.getElementById("phone");
+	usn = document.getElementById("usn");
 	
-	elem = document.getElementById("signup_name");
-	alert(elem.value);
+	if(username.value != null && username.value != "" && usn.value != null && usn.value != "" && pass.value != null && pass.value != "" && 
+		confirm_pass != null && confirm_pass != "" && email.value != null && email.value != "" && phone.value != null && phone.value != "" ){
+
+		if(pass.value == confirm_pass.value){
+
+			document.signup_form.submit();
+		}else{
+	
+			document.getElementById("matching").style.visibility = "visible";
+		}
+	}
+	else{
+		
+		document.getElementById("required_text").style.visibility = "visible";
+	}
+		
 }
 </script>
 </head>
@@ -23,56 +42,60 @@ function clicked(){
 </div>
 
 <div id="body1">
-	<div id="table_container">
-	<form action="newuser.php" method="post">
-	<table summary="Required user information while sigining up" id="signup_table" border="0" cellpadding="6px">
-		<tr id="signup_font">
-			<td>USN</td>
-			<td><input type="text" id="signup_name" name="usn"/></td>
-		</tr>
-		<tr id="signup_font">
-			<td>email</td>
-			<td><input type="text" id="signup_name" name="email"/></td>
-		</tr>
-		<tr id="signup_font">
-			<td>Name</td>
-			<td><input type="text" id="signup_name" name="name"/></td>
-		</tr>
-		<tr id="signup_font">
-			<td>Password</td>
-			<td><input type="password" id="signup_name" name="passwd"/></td>
-		</tr>
-		<tr id="signup_font">
-			<td>Confirm Password</td>
-			<td><input type="password" id="signup_name" name="cpasswd"/></td>
-		</tr>
-		<tr id="signup_font">
-			<td>Birthday</td>
-			<td><input type="date" id="dob" name="dob"/></td>
-		</tr>
-		<tr id="signup_font">
-			<td>Gender</td>
-			<td>
-				<select name="gender">
-					<option>Male</option>
-					<option>Female</option>
-				</select>
-			</td>
-		</tr>
-		<tr id="signup_font">
-			<td>Mobile No</td>
-			<td><input type="text" value="+91 " id="signup_phno" name="phone"/></td>
-		</tr>
-	
-		<tr id="signup_font">
-			<td><input type="submit" value="Sign Up" name="Sign Up"/></td>
-		</tr>	
-	</table>
-	</form></div>
+
 </div>
 
 <div id="body2">
-	
+	<div id="signup_text">Create a new Account</div>
+	<div id="table_container">
+		<form action="newuser.php" name="signup_form" method="POST">
+		<table summary="Required user information while sigining up" id="signup_table" border="0" cellpadding="6px">
+			<tr id="signup_font">
+				<td>Name<sup id="required">*</sup></td>
+				<td><input type="text" id="username" name="name" placeholder="First Last"/></td>
+			</tr>
+			<tr id="signup_font">
+				<td>USN<sup id="required">*</sup></td>
+				<td><input type="text" id="usn" name="usn" placeholder="USN (Max 10 Characters)"/></td>
+			</tr>
+			<tr id="signup_font">
+				<td>Password<sup id="required">*</sup></td>
+				<td><input type="password" id="pass" name="pass"/></td>
+			</tr>
+			<tr id="signup_font">
+				<td>Confirm Password<sup id="required">*</sup></td>
+				<td><input type="password" id="confirm_pass" name="cpass"/><div id="matching">Passwords not matching!</div></td>
+			</tr>
+			<tr id="signup_font">
+				<td>e-mail id<sup id="required">*</sup></td>
+				<td><input type="text" id="email" name="email" placeholder="name@example.com"/><div id="matching">email</div></td>
+			</tr>
+			<tr id="signup_font">
+				<td>Birthday</td>
+				<td><input type="date" id="dob" name="dob"/></td>
+			</tr>
+			<tr id="signup_font">
+				<td>Gender</td>
+				<td>
+					<select name="gender">
+						<option>Male</option>
+						<option>Female</option>
+					</select>
+				</td>
+			</tr>
+			<tr id="signup_font">
+				<td>Mobile No<sup id="required">*</sup></td>
+				<td><input type="text" placeholder="+91" id="phone" name="phone"/></td>
+			</tr>
+		
+			<tr>
+				<td><input type="button" value="Sign Up" id="signup" onClick="clicked()"/></td>
+			</tr>
+
+		</table>	
+		</form>
+	</div>
+	<div id="required_text">* marked details required</div>
 </div>
 
 <div id="footer"></div>

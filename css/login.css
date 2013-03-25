@@ -2,7 +2,7 @@
 
 	background-color: #ADD8E6;
 	position: absolute;
-	top: 20%;
+	top: 15%;
 	left: 25%;
 	width: 48%;
 	height: 40%;
@@ -110,4 +110,23 @@
 	
 }
 
+#signup{
+	position: absolute;
+	top: 75%;
+	left: 35%;
+	width: 25%;
+	height: 12%;
+	background-color: #2E9AFE;
+	border-color: #2E64FE;
+	font-size: 1.2em;
+}
 
+#matching{
+
+	color: red;
+	position: absolute;
+	top: 89%;
+	font-size: 1.3em;
+	left : 20%;
+	visibility: hidden;
+}

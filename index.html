@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Portal</title>
+	<link href="css/template.css" rel="stylesheet" type="text/css"/>
+	<link href="css/login.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript">
+
+function signin(){
+
+	username = document.getElementById("name");
+	pass = document.getElementById("pass");
+	
+	if(username.value != null && username.value != "" && pass.value != null && pass.value != ""){
+
+		document.signin_form.submit();
+	}else{
+
+		document.getElementById("matching").style.visibility = "visible";
+	}
+}
+
+</script>
+</head>
+
+<body>
+
+
+<?php
+$_SESSION['is_logged_in'] = 0;
+session_destroy();
+?>
+
+<a href="logout.php">Log Out</a>
+
+<div id="header">
+	<div id="welcome">Project Portal</div>
+</div>
+
+
+<div id="body1">
+	<div id="welcome_message">Welcome</div>
+</div>
+
+<div id="body2">
+	<form action="login.php" name="signin_form" method="POST">
+	<div id="login">
+		<div id="a_s">Login as admin/student</div>
+		<hr id="hrinlogin">
+		<div id="Name">USN</div> 
+		<input id="name" type="text" name="name" placeholder="USN (Max 10 Characters)" maxlength="10"/>
+		<div id="Pass">Password</div> 
+		<input id="pass" type="password" name="pass" placeholder="Password (Max 30 Characters)" maxlength="30"/>
+		<input type="submit" value="Login" id="send" onClick="signin()"/>
+		<a href="signup.html"><input type="button" id="signup" value="Sign Up"/></a>
+		<div id="matching">Connot leave fields empty</div>
+	</div>
+	</form>
+</div>
+
+<div id="footer"></div>;
+
+</body>
+</html>
+
+

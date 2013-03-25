@@ -7,6 +7,7 @@
 
 <?php
 $usn = $_POST['usn'];
+$name = $_POST['name'];
 $email = $_POST['email'];
 $passwd = md5($_POST['pass']);
 $dob = $_POST['dob'];
@@ -47,7 +48,7 @@ else
 	{
 	  die('Error: ' . mysqli_error());
 	}
-	header("location:index.php");
+	header("location:index.html");
 }
 
 mysqli_close($con);

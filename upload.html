@@ -1,61 +1,98 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Portal</title>
+	<link href="css/template2.css" rel="stylesheet" type="text/css"/>
+	<link href="css/upload.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript">
+
+function selected(cb){
+
+	if(cb.checked == true)
+		document.getElementById("tobe_hidden").style.visibility = "visible";
+	else
+		document.getElementById("tobe_hidden").style.visibility = "hidden";
+}
+
+function Upload(){
+
+	// title = document.getELementById("title");
+	// authors = document.getElementById("authors");
+	// guide = document.getElementById("guide");
+	// year = document.getElementById("year");
+	// languages = document.getELementById("languages");
+	// domain = document.getElementById("domain");
+
+	// alert(document.getElementById("file").value);
+}
+	
+</script>
+</head>
 
 <body>
-<!--
+
+<?php
 if ($_SESSION['is_logged_in'] == 0 )
 {
     header("Location:index.php");
     die();
 }
--->
+?>
 
-<h1> File Upload Form </h1>
-<form action="upload_file.php" method="post" enctype="multipart/form-data">
-<pre>
-	To
-	.....
-	........
-	............
-		be 
-		......
-		.........
-		............
-			designed
-			...............
-			..................
-			.........................
+<div id="header">
+	<div id="welcome">Project Portal</div>
+</div>
 
+<div id="body1">
 
-			Name
-			Authors
-			Guide
-			Year
-			Programming Languages used
-			which domain
-			status
-			also 
-				if status is completed
-					make the upload file visible ( below code )
-				else
-					dont 
+</div>
 
-			.......................
-		.......................
-		.......................
-		.......................
-		.......................
-			
-
-
-</pre>
-
-<label for="file">Source Files : </label>
-<input type="file" name="file" id="file"><br>
-<input type="submit" name="submit" value="Upload">
-
-</form>
+<div id="body2">
+	<div id="signup_text">Upload Project</div>
+	<div id="table_container">
+		<form action="upload_file.php" name="signup_form" method="POST">
+		<table id="signup_table" border="1" cellspacing="0" cellpadding="10">
+			<tr>
+				<td id="col1">Project Title<sup id="required">*</sup></td>
+				<td id="col2"><input type="text" id="title" name="title"/></td>
+			</tr>
+			<tr>
+				<td id="col1">Authors<sup id="required">*</sup></td>
+				<td id="col2"><input type="text" id="authors" name="authors"/></td>
+			</tr>
+			<tr>
+				<td id="col1">Guide</td>
+				<td id="col2"><input type="text" id="guide" name="guide"/></td>
+			</tr>
+			<tr>
+				<td id="col1">Year<sup id="required">*</sup></td>
+				<td id="col2"><input type="text" id="year" name="year"></td>
+			</tr>
+			<tr>
+				<td id="col1">Programming Lanuguages used<sup id="required">*</sup></td>
+				<td id="col2"><input type="text" id="languages" name="languages"></td>
+			</tr>
+			<tr>
+				<td id="col1">Domain<sup id="required">*</sup></td>
+				<td id="col2"><input type="text" id="domain" name="domain"></td>
+			</tr>
+			<tr>
+				<td id="col1">Completed ?</td>
+				<td id="col2"><input type="checkbox" id="check" name="check" onchange="selected(this)"/></td>
+			</tr>
+			<tr id="tobe_hidden">
+				<td id="col1">Upload Project</td>
+				<td id="col2"><input type="file" id="file" name="file"></td>
+			</tr>
+		</table>
+		<input type="submit" value="Upload" id="upload" onClick="Upload()"/></td>
+		</form>
+	</div>
+	<div id="required_text">* marked details required</div>
+</div>
+<!-- <input type="checkbox" id="checkbox" onchange="cl(this)"/> -->
+<div id="footer"></div>
 
 </body>
-
-
 </html>

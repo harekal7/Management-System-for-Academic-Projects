@@ -1,0 +1,64 @@
+
+#body1{
+
+	position: absolute;
+	top: 15.6%;
+	left: 0em;	
+	width: 15%;
+	height: 80%;
+	background-color: lavender;
+}
+
+#body2{
+
+	position: absolute;
+	top: 15.6%;
+	left: 15%;
+	width: 85%;
+	height: 80%;
+	background-color: honeydew;
+}
+
+#header{
+	
+	position: fixed;
+	top: 0em;
+	left: 0em;
+	width: 100%;
+	height: 15.5%;
+	background-color: black;	
+}
+
+#footer{
+	
+	position: fixed;
+	left: 0%;
+	top: 95.5%;
+	width: 100%;
+	height: 4.5%;
+	background-color: gray;
+}
+
+
+#welcome_message{
+	
+	font-size: 4em;
+	text-align: center;
+	font-family: cursive;
+	
+}
+
+#welcome_body{
+	
+	text-indent: 4em;
+	width: 4em;
+	font-size: 4em;
+	
+}
+#welcome{
+
+	color: white;
+	font: serif;
+	font-size: 6em;
+	text-align: center;
+}

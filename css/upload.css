@@ -1,0 +1,137 @@
+#table_container{
+
+	position: absolute;
+	left: 25%;
+	top: 10%;
+	background-color: #ADD8E6;
+	height: 67%;
+	width: 44%;
+
+}
+
+#username, #confirm_pass, #pass, #usn{
+
+	font-size: 0.5em;
+}
+
+#phone{
+
+	font-size: 0.5em;
+}
+
+#signup_font{
+
+	font-size: 2em;
+}
+
+
+#signup{
+
+	position: absolute;
+	background-color: #2E9AFE;
+	top: 86%;
+	left: 74%;
+	border-color: #2E64FE;
+	font-size: 1.2em;
+	height:8%;
+	width: 22%;
+}
+
+#signup_text{
+
+	font-size: 2.5em;
+	font-family: cursive;
+	position: absolute;
+	top: 1%;
+	left: 40%;
+	color: #2554C7;
+}
+
+#required{
+
+	font-size: 0.5em;
+	color: red;
+
+}
+
+#required_text{
+
+	font-size: 1.2em;
+	position: absolute;
+	top: 81%;
+	left: 38%;
+	color: red;
+	visibility: hidden;
+}
+
+#matching{
+
+	font-size: 0.5em;
+	position: absolute;
+	top: 33%;
+	left: 60%;
+	color: red;
+	visibility: hidden;
+
+}
+
+#col1{
+
+	width: 8em;
+	height: 1.2em;
+	font-size: 2em;
+}
+
+#col2{
+
+	width: 13em;
+	height: 1.2em;
+	font-size: 2em;
+}
+
+
+#title, #authors, #guide, #year, #languages, #domain, #file{
+
+	width: 90%;
+	font-size: 0.7em;
+}
+
+#check{
+
+	width: 3em;
+	height: 1em;
+	font-size: 0.7em;
+	position: absolute;
+	top: 79%;
+	left: 60%;
+}
+
+#file{
+
+	width: 90%;
+	font-size: 0.5em;
+}
+
+#tobe_hidden{
+
+	visibility: hidden;
+}
+
+#upload{
+
+	background-color: #2E9AFE;
+	border-color: #2E64FE;
+	font-size: 1.2em;
+	height:2em;
+	width: 7em;
+	position: absolute;
+	left: 80%;
+	top: 101%;
+}
+
+#required{
+
+	font-size: 0.5em;
+	color: red;
+
+}
