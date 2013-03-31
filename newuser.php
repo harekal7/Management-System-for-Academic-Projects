@@ -20,7 +20,7 @@ if (strcmp($gender,"Male"))
 	$g = 0;
 }
 
-$con=mysqli_connect("localhost","root","a","projects");
+$con=mysqli_connect("localhost","root","","projects");
 
 if (mysqli_connect_errno($con))
 {
@@ -29,9 +29,9 @@ if (mysqli_connect_errno($con))
 
 $result = mysqli_query($con,"SELECT * FROM users WHERE usn='$usn'");
 
-if (mysqli_error())
+if (mysqli_error($con))
 {
-   die(mysqli_error());
+   die(mysqli_error($con));
 }
 
 if(mysqli_num_rows($result) == 1)

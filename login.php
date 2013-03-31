@@ -11,7 +11,7 @@ $_SESSION['is_logged_in'] = 0;
 $username = $_POST['name'];
 $password = md5($_POST['pass']);
 
-$con=mysqli_connect("localhost","root","a","projects");
+$con=mysqli_connect("localhost","root","","projects");
 
 if (mysqli_connect_errno($con))
 {
@@ -19,23 +19,29 @@ if (mysqli_connect_errno($con))
 }
 
 $result = mysqli_query($con,"SELECT * FROM users WHERE usn='$username' AND passwd='$password'");
-if (mysqli_error())
+if (mysqli_error($con))
 {
-   die(mysqli_error());
+   die(mysqli_error($con));
 }
-
 if(mysqli_num_rows($result) == 1)
 {
 	$_SESSION['is_logged_in'] = 1;
-  	header("location:home.php");
+	$row = mysqli_fetch_array($result);
+	if ( $row['usertype'] == 'admin')
+	{
+		header("location:admin.php");	
+	}
+	else
+	{
+		header("location:home.php");
+	}
 }
 else
 {
-	header("location:logout.php");
+	echo "HELLO";
+	//header("location:logout.php");
 }
 mysqli_close($con);
 ?>
-
 </body>
-
 </html>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 21, 2013 at 08:56 PM
+-- Generation Time: Mar 25, 2013 at 05:26 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.6-1ubuntu1.2
 
@@ -52,6 +52,24 @@ INSERT INTO `project` (`Name`, `id`, `author`, `guide`, `year`, `PL`, `domain`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `review`
+--
+
+CREATE TABLE IF NOT EXISTS `review` (
+  `Name` varchar(255) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `author` varchar(50) NOT NULL,
+  `guide` varchar(30) NOT NULL,
+  `year` year(4) NOT NULL,
+  `PL` varchar(30) NOT NULL,
+  `domain` varchar(30) NOT NULL,
+  `status` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -75,7 +93,15 @@ INSERT INTO `users` (`usn`, `passwd`, `email`, `usertype`, `DOB`, `gender`, `pho
 ('1pi10cs105', 'f6c02f372fb1fb4f03f6b54c122de449', '1pi10cs105@yahoo.com', 'user', '2003-12-31', 0, '+919445899990'),
 ('1pi10cs089', 'ec4f2d42f39101b65c43293a4ac0869c', '1pi10cs089@gmail.com', 'user', '2005-03-26', 1, '+919499956432'),
 ('1pi10cs113', '265e1a8386bfab6432aaf414da94aa3b', '1pi10cs113@gmail.com', 'user', '2004-05-11', 0, '+917769656432'),
-('8147555550', 'c9ee7456f835593ff0dbf825fe68b688', 'profbadrip@gmail.com', 'admin', '2003-07-15', 1, '+918147555550');
+('8147555550', 'c9ee7456f835593ff0dbf825fe68b688', 'profbadrip@gmail.com', 'admin', '2003-07-15', 1, '+918147555550'),
+('1pi10cs117', 'c2f5032a3dc60d3731771429c560e8a1', '1pi10cs117@gmail.com', 'user', '2002-01-15', 1, '8678976543'),
+('1pi10cs078', 'd41d8cd98f00b204e9800998ecf8427e', '1pi10cs078@hotmail.com', 'user', '2013-03-05', 0, '+91 990089900'),
+('1pi10cs118', 'd41d8cd98f00b204e9800998ecf8427e', '1pi10cs118@rediff.com', 'user', '2007-03-06', 0, '+91 964399008'),
+('1pi10cs119', 'd41d8cd98f00b204e9800998ecf8427e', '1pi10cs119@gmail.com', 'user', '2012-04-04', 1, '+91 776006789'),
+('1pi10cs001', 'd41d8cd98f00b204e9800998ecf8427e', '1pi10cs001@yahoo.com', 'user', '1992-03-25', 0, '+918147566458'),
+('1pi10cs002', 'd41d8cd98f00b204e9800998ecf8427e', '1pi10cs002@gmail.com', 'user', '1993-03-03', 1, '+91 815634485'),
+('1pi10cs076', '1d03b7e3f78f94d41ab9074ad5d47651', '1pi10cs076@yahoo.com', 'user', '1992-09-17', 1, '+918147566489'),
+('1pi10cs080', '0dd4b9008b9a1d7c1a35ed2b4a5bd66a', '1pi10cs080@gmail.com', 'user', '1992-03-03', 0, '+918147566978');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

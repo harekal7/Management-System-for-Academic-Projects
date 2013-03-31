@@ -17,7 +17,7 @@ if ($_SESSION['is_logged_in'] == 0 )
 }
 $id = $_GET['id'];
 
-$con=mysqli_connect("localhost","root","a","projects");
+$con=mysqli_connect("localhost","root","","projects");
 
 if (mysqli_connect_errno($con))
 {
@@ -29,7 +29,7 @@ $row = mysqli_fetch_array($result);
 
 echo "Project Name : ";
 echo $row['Name'];
-echo "<br>";echo "<br>";
+echo "<br><br>";
 
 echo "Author : ";
 echo $row['author'];

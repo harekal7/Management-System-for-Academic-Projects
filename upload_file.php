@@ -3,13 +3,35 @@
 <body>
 
 <?php
+session_start();
+if ($_SESSION['is_logged_in'] == 0 )
+{
+    header("Location:index.html");
+    die();
+}
 $name=$_POST['title'];
 $author=$_POST['authors'];
 $guide=$_POST['guide'];
 $year=$_POST['year'];
 $pl=$_POST['languages'];
 $domain=$_POST['domain'];
-$status=$_POST['check'];
+$status = isset($_POST['check']) && $_POST['check']  ? "1" : "0";
+/*
+if ($_POST['check']== NULL )
+{
+
+}
+
+if ( $_POST['check'] == 'on')
+{
+	$status = 1;
+}
+else
+{
+	$status = 0;
+}
+*/
+
 //$file=$_POST['file'];
 
 //echo $file=$_POST['file'];
@@ -20,19 +42,20 @@ if ($_SESSION['is_logged_in'] == 0 )
     die();
 }
 */
-$con=mysqli_connect("localhost","root","a","projects");
+
+$con=mysqli_connect("localhost","root","","projects");
 if (mysqli_connect_errno($con))
 {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$sql="INSERT INTO review (name, author, guide, year, pl, domain, status) VALUES
+$sql="INSERT INTO project (name, author, guide, year, pl, domain, status) VALUES
 	('$name', '$author', '$guide', '$year', '$pl', '$domain', '$status')";
 
 
 if (!mysqli_query($con,$sql))
 {
-	die('Error: ' . mysqli_error());
+	die('Error: ' . mysqli_error($con));
 }
 else
 {
