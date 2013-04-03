@@ -59,7 +59,7 @@ if (!mysqli_query($con,$sql))
 }
 else
 {
-	echo "Row inserted";
+	echo " Your Project has been submitted for review";
 }
 
 /*

@@ -1,61 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8"/>
+  <title>Portal</title>
+  <link href="css/student.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
 
-    <title>Portal</title>
-    <link href="css/admin_search.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+
+</script>
 </head>
 
-<body>
+<body >
 <?php
-
-echo "<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Management System for Academic Projects</h2><br><br>";
-
 session_start();
 if ($_SESSION['is_logged_in'] == 0 )
 {
     header("Location:index.html");
     die();
 }
-
-
-echo '<a href="logout.php">Log Out</a>';
-echo '<br>';
-
-echo '<div id="space_container">';
-echo '<a href="upload.html"> <input type="button" name="upload" value="Upload Project"> </a>;
-
-
-      <div id="searching">
-          <form action="search.php" method="post">
-          <input type="text" id="search_name" name="search"/>
-          <select id="options" name="options">
-            <option disabled="disabled" selected="selected">--Select--</option>
-            <option>Name</option>
-            <option>Domain</option>
-            <option>Year</option>
-            <option>Languages</option>
-          </select>
-          <input type="submit" value="Search" id="search_button" name="submit"/>
+echo '
+  <div id="header">
+    <div id="navbar">
+      <div id="project_title">Project Portal</div>
+      <div id="menu_table_container">
+          <table border="0">
+            <tr>
+              <td id="menu_col1"><a href="" id="aboutus">About Us</a></td>
+              <td id="menu_col1"><a href="logout.php" id="signout">Sign Out</a></td>
+          </table>
       </div>
-    
-<br><br><br><br>';
+    </div>
+  </div>
 
-$con=mysqli_connect("localhost","root","","projects");
+  <div id="container">
+    <div id="links_table_container">
+      <table id="links_table" border="1" cellspacing="0.6" cellpadding="5">
+        <tr>
+          <td id="projects_col"><a href="home.php" id="projects">Projects</a></td>
+        <tr>
+        <tr>
+          <td id="search_col"><a href="search.html" id="search">Search</a></td>
+        <tr>
+        <tr>
+          <td id="upload_col"><a href="upload.html" id="upload">Upload</a></td>
+        <tr>
+      </table>
+    </div>
+    <div id="space_container">';
+    $con=mysqli_connect("localhost","root","","projects");
 
 if (mysqli_connect_errno($con))
 {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result = mysqli_query($con,"SELECT * FROM project");
+$result = mysqli_query($con,"SELECT * FROM project WHERE review='1'");
 if (mysqli_error($con))
 {
    die(mysqli_error($con));
@@ -66,11 +69,11 @@ $i = 1;
 while(($row = mysqli_fetch_array($result)) && ($i<4) )
 {
   $name = $row['Name'];
-  $path = "http://localhost/SE/second.php?id=".$row['id']."";
-  
+  $path = "http://localhost/SEFINAL/second.php?id=".$row['id']."";
+  $id = $row['id']; 
   echo "<a href=$path>$name</a>";
   echo "<br />";
-  $file=fopen("info".$i.".txt","r") or exit("Unable to open file!");
+  $file=fopen("info".$id.".txt","r") or exit("Unable to open file!");
   while(!feof($file))
   {
     echo fgets($file). "<br>";
@@ -80,11 +83,11 @@ while(($row = mysqli_fetch_array($result)) && ($i<4) )
 
 
 }
-
-echo '</div>';
-
 mysqli_close($con);
-?>
-</body>
 
+    echo '</div>
+  </div>';
+?>
+  </div>
+</body>
 </html>

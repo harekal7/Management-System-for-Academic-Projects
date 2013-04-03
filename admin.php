@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+
+  <link href="css/admin.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
   <meta charset="utf-8"/>
 
     <title>Portal</title>
@@ -20,10 +27,11 @@ if ($_SESSION['is_logged_in'] == 0 )
 echo '<a href="logout.php">Log Out</a>';
 echo '<br>';
 
-echo '<form action="search.php" method="post">
-<input type="text" name="search" id="search">
-<input type="submit" name="submit" id="submit" value="Search">
-';
+echo '<a href="admin_request.php">Check Requests</a>';
+echo '<br>';
+
+
+echo '<a href="search.html">Search Projects</a><br>';
 
 echo "<br><br>";
 echo "<br><br>";
@@ -42,27 +50,39 @@ if (mysqli_error($con))
 }
 
 $i = 1;
+$j = 1;
 
-while(($row = mysqli_fetch_array($result)) && ($i<4) )
+echo '<a href="home.php">HOME PAGE</a><br><br>';
+
+while($row = mysqli_fetch_array($result))
 {
   $name = $row['Name'];
+  $id = $row['id'];
   $path = "http://localhost/SE/second.php?id=".$row['id']."";
   
   echo "<a href=$path>$name</a>";
   echo "<br />";
-  $file=fopen("info".$i.".txt","r") or exit("Unable to open file!");
+  $file=fopen("info".$id.".txt","r") or exit("Unable to open file!");
   while(!feof($file))
   {
     echo fgets($file). "<br>";
   }
-  $i = $i + 1;
-  echo "<br />";echo "<br />";echo "<br />";
-
-
+  echo "<a href='accept.php?id=$id'><input type='submit' name='ga.$i.' id='ga.$i.' value='Accept'></a>";
+  echo "<a href='reject.php?id=$id'><input type='submit' name='da.$j.' id='da.$j.' value='Reject'></a>";
+  echo "<br /><br />";
+  $i = $i +1;
+  $j = $j +1;
 }
+
+if( $i == 1)
+{
+  echo 'No Projects to be reviewed';
+}
+
 
 mysqli_close($con);
 ?>
+</div>
 </body>
 
 </html>

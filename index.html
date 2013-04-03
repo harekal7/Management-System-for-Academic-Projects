@@ -2,66 +2,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Portal</title>
-	<link href="css/template.css" rel="stylesheet" type="text/css"/>
-	<link href="css/login.css" rel="stylesheet" type="text/css"/>
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Wendy+One' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript">
+	
+function validate(){
 
-function signin(){
-
-	username = document.getElementById("name");
+	username = document.getElementById("username");
 	pass = document.getElementById("pass");
 	
-	if(username.value != null && username.value != "" && pass.value != null && pass.value != ""){
+	if(username.value == "" || pass.value == "")
+		document.getElementById("required_text").style.visibility = "visible";
+	else{
 
-		document.signin_form.submit();
-	}else{
-
-		document.getElementById("matching").style.visibility = "visible";
+		document.login_form.submit();
 	}
+		
 }
-
 </script>
 </head>
 
 <body>
-
 
 <?php
 $_SESSION['is_logged_in'] = 0;
 session_destroy();
 ?>
 
-<a href="logout.php">Log Out</a>
-
-<div id="header">
-	<div id="welcome">Project Portal</div>
-</div>
-
-
-<div id="body1">
-	<div id="welcome_message">Welcome</div>
-</div>
-
-<div id="body2">
-	<form action="login.php" name="signin_form" method="POST">
-	<div id="login">
-		<div id="a_s">Login as admin/student</div>
-		<hr id="hrinlogin">
-		<div id="Name">USN</div> 
-		<input id="name" type="text" name="name" placeholder="USN (Max 10 Characters)" maxlength="10"/>
-		<div id="Pass">Password</div> 
-		<input id="pass" type="password" name="pass" placeholder="Password (Max 30 Characters)" maxlength="30"/>
-		<input type="submit" value="Login" id="send" onClick="signin()"/>
-		<a href="signup.html"><input type="button" id="signup" value="Sign Up"/></a>
-		<div id="matching">Connot leave fields empty</div>
+	<div id="test">
+		<div id="title">Project Portal</div>	
 	</div>
-	</form>
-</div>
 
-<div id="footer"></div>;
+	<div id="login">Login</div>
+	<div id="login_container">
+		<form name="login_form" action="login.php" method="post">
+		<table id="login_table" border="0">
+			<tr>
+				<td id="col1">Username</td>
+				<td id="col2"><input type="text" id="username" name="name"></td>
+			</tr>
 
+			<tr>
+				<td id="col1">Password</td>
+				<td id="col2"><input type="password" id="pass" name="pass"></td>
+			</tr>
+		</table>
+		<input type="submit" id="btn" value="Login" onclick="validate()"></td>
+		<a href="signup.html" id="signup_button"><input type="Button" id="btn2" value="Sign Up"></a>
+		</form>
+		<div id="guest"><a href="others/projects.html" id="guest">Guest User? Click here</a></div>
+	</div>
+	<div id="required_text">Error in logging</a></div>
+	
 </body>
+
 </html>
-
-

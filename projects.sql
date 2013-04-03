@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 31, 2013 at 11:31 AM
+-- Generation Time: Apr 03, 2013 at 12:19 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -35,9 +35,9 @@ CREATE TABLE IF NOT EXISTS `project` (
   `PL` varchar(20) NOT NULL,
   `domain` varchar(30) NOT NULL,
   `status` tinyint(1) NOT NULL,
-  `review` tinyint(1) NOT NULL,
+  `review` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `project`
@@ -49,6 +49,28 @@ INSERT INTO `project` (`Name`, `id`, `author`, `guide`, `year`, `PL`, `domain`, 
 ('Management System for Academic Projects', 3, 'Somashekhar', 'Phalachandra', 2008, 'HTML5, CSS3, Javascr', 'Web', 1, 1),
 ('Faculty Adviser Automation', 4, 'Shivaraj', 'N S Kumar', 2009, 'Java', 'GUI based Desktop Application', 1, 1),
 ('Sparse Matrix', 5, 'Niranjan', 'H B Mahesh', 2011, 'C', 'Data-Structures', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request`
+--
+
+CREATE TABLE IF NOT EXISTS `request` (
+  `name` varchar(10) NOT NULL,
+  `id` int(11) NOT NULL,
+  `ta` varchar(200) NOT NULL,
+  `grant1` tinyint(1) NOT NULL,
+  PRIMARY KEY (`name`,`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `request`
+--
+
+INSERT INTO `request` (`name`, `id`, `ta`, `grant1`) VALUES
+('1pi10cs116', 1, 'hello', 1),
+('1pi10cs116', 3, 'i want it', 0);
 
 -- --------------------------------------------------------
 

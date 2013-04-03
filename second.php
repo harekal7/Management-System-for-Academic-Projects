@@ -3,18 +3,26 @@
 <head>
 	<title>Portal</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/student.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
+<div id="container">
 <?php
 session_start();
-echo "<a href='logout.php'>Log Out</a>";
-echo "<br><br>";
 if ($_SESSION['is_logged_in'] == 0 )
 {
     header("Location:index.php");
     die();
 }
+echo "<a href='logout.php'>Log Out</a>";
+echo "<br><br>";
 $id = $_GET['id'];
 
 $con=mysqli_connect("localhost","root","","projects");
@@ -67,8 +75,12 @@ else
 	echo "Completed";
 echo "<br>";echo "<br>";
 
+$path = "request.php?id=".$id."";
+echo "<a href=$path>Request for source code</a>";
+
 mysqli_close($con);
 ?>
+<div>
 </body>
 
 </html>

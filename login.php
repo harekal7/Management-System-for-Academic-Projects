@@ -26,6 +26,7 @@ if (mysqli_error($con))
 if(mysqli_num_rows($result) == 1)
 {
 	$_SESSION['is_logged_in'] = 1;
+	$_SESSION['name']=$username;
 	$row = mysqli_fetch_array($result);
 	if ( $row['usertype'] == 'admin')
 	{
