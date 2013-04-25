@@ -33,10 +33,6 @@ echo '<br>';
 
 echo '<a href="search.html">Search Projects</a><br>';
 
-echo '<a href="manage_projects.php">Manage Projects</a><br>';
-
-echo '<a href="manage_users.php">Manage Users</a><br>';
-
 echo "<br><br>";
 echo "<br><br>";
 
@@ -47,42 +43,34 @@ if (mysqli_connect_errno($con))
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result = mysqli_query($con,"SELECT * FROM project WHERE review='0'");
+$result = mysqli_query($con,"SELECT * FROM project");
 if (mysqli_error($con))
 {
    die(mysqli_error($con));
 }
 
-$i = 1;
-$j = 1;
-
 echo '<a href="home.php">HOME PAGE</a><br><br>';
+
 
 while($row = mysqli_fetch_array($result))
 {
-  $name = $row['Name'];
-  $id = $row['id'];
-  $path = "http://localhost/SE/second.php?id=".$row['id']."";
-  
-  echo "<a href=$path>$name</a>";
-  echo "<br />";
-  $file=fopen("info".$id.".txt","r") or exit("Unable to open file!");
-  while(!feof($file))
-  {
-    echo fgets($file). "<br>";
-  }
-  echo "<a href='accept.php?id=$id'><input type='submit' name='ga.$i.' id='ga.$i.' value='Accept'></a>";
-  echo "<a href='reject.php?id=$id'><input type='submit' name='da.$j.' id='da.$j.' value='Reject'></a>";
-  echo "<br /><br />";
-  $i = $i +1;
-  $j = $j +1;
+   $name = $row['Name'];
+   $id = $row['id'];
+   $path = "second.php?id=".$row['id']."";
+   //echo "<br>$id<br>";
+   echo "<a href=$path>$name</a>";
+   $delete = "delete_project.php?id=".$row['id']."";
+   echo "<a href=$delete><input type='button' name='delete' id='delete' value='Delete'></a>";
+   echo "<br />";
+   $file=fopen("info".$id.".txt","r") or exit("Unable to open file!");
+   while(!feof($file))
+   {
+      echo fgets($file). "<br>";
+   }
+   echo "<br /><br />";
 }
 
-if( $i == 1)
-{
-  echo 'No Projects to be reviewed';
-}
-
+echo '</table>';
 
 mysqli_close($con);
 ?>

@@ -31,6 +31,7 @@ echo '
             <tr>
               <td id="menu_col1"><a href="" id="aboutus">About Us</a></td>
               <td id="menu_col1"><a href="logout.php" id="signout">Sign Out</a></td>
+              <td id="menu_col1"><a href="change_password.html" id="cp" name="cp">Change Password</a></td>
           </table>
       </div>
     </div>
@@ -69,7 +70,7 @@ $i = 1;
 while(($row = mysqli_fetch_array($result)) && ($i<4) )
 {
   $name = $row['Name'];
-  $path = "http://localhost/SEFINAL/second.php?id=".$row['id']."";
+  $path = "second.php?id=".$row['id']."";
   $id = $row['id']; 
   echo "<a href=$path>$name</a>";
   echo "<br />";
