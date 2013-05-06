@@ -69,13 +69,9 @@ body{
 	height: 3.5em;
 	width: 6em;
 	text-align: center;
-
-}
-
-#menu_col1{
-
 	font-family: 'Fredoka One', cursive;
 }
+
 
 #aboutus, #signout{
 
@@ -113,10 +109,11 @@ body{
 	border-radius: 10px;
 	border: 2px solid white;
 	background-color: #848484;
+	overflow: auto;
 }
 
 
-#notifications_col:hover, #projects_col:hover, #search_col:hover, #manage_users_col:hover, #manage_projects_col:hover{
+#notifications_col:hover, #projects_col:hover, #search_col:hover, #manage_users_col:hover, #manage_projects_col:hover, #source_request_col:hover{
 
 	background-color: black;
 	opacity: 0.7;
@@ -124,7 +121,7 @@ body{
 }
 
 
-#notifications_col, #projects_col, #search_col, #manage_users_col, #manage_projects_col{
+#notifications_col, #projects_col, #search_col, #manage_users_col, #manage_projects_col, #source_request_col{
 
 	color: white;
 	font-size: 1.1em;
@@ -136,7 +133,7 @@ body{
 	font-family: 'Nova Square', cursive;
 }
 
-#home, #projects, #manage_users, #manage_projects, #search{
+#home, #projects, #manage_users, #manage_projects, #search, #source_requests{
 
 	text-decoration: none;
 	color: white;
@@ -162,4 +159,38 @@ body{
 
 	opacity: 0.6;
  	-webkit-transition: opacity 0.2s ease-in; 
+}
+
+#no_review_text{
+
+	color: white;
+	position: relative;
+	left: 20%;
+	top: 40%;
+	font-size: 2em;
+	font-family: 'Shojumaru', cursive;
+}
+
+#menu_col1:hover{
+
+	background-color: grey;
+}
+
+#approval_name{
+
+	font-size: 2em;
+	text-decoration: none;
+	color: white;
+	position: relative;
+	left: 2%;
+}
+
+
+#approval_text{
+
+	font-size: 1.2em;
+	position: relative;
+	left: 2%;
+	text-indent: 2em;
+
 }

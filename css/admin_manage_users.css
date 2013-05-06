@@ -68,12 +68,16 @@ body{
 	height: 3.5em;
 	width: 6em;
 	text-align: center;
-
 }
 
 #menu_col1{
 
 	font-family: 'Fredoka One', cursive;
+}
+
+#menu_col1:hover{
+
+	background-color: grey;
 }
 
 #aboutus, #signout{
@@ -85,7 +89,7 @@ body{
 #aboutus:hover, #signout:hover{
 
  	opacity: 0.6;
- 	-webkit-transition: opacity 0.2s ease-in; 
+ 	-webkit-transition: opacity 0.2s ease-in;
  }
 
 #links_table_container{
@@ -111,17 +115,18 @@ body{
 	margin-left: 20%;
 	border-radius: 10px;
 	border: 2px solid white;
-	background-color: #848484;
+	background-color: grey;
+	overflow: auto;
 }
 
-#notifications_col:hover, #projects_col:hover, #search_col:hover, #manage_users_col:hover, #manage_projects_col:hover{
+#notifications_col:hover, #projects_col:hover, #search_col:hover, #manage_users_col:hover, #manage_projects_col:hover, #source_request_col:hover{
 
 	background-color: black;
 	opacity: 0.7;
  	-webkit-transition: opacity 0.2s ease-in; 
 }
 
-#notifications_col, #projects_col, #search_col, #manage_users_col, #manage_projects_col{
+#notifications_col, #projects_col, #search_col, #manage_users_col, #manage_projects_col, #source_request_col{
 
 	color: white;
 	font-size: 1.1em;
@@ -133,7 +138,7 @@ body{
 	font-family: 'Nova Square', cursive;
 }
 
-#home, #projects, #manage_users, #manage_projects, #search{
+#home, #projects, #manage_users, #manage_projects, #search, #source_requests{
 
 	text-decoration: none;
 	color: white;
@@ -166,4 +171,72 @@ body{
 	background-color: black;
 	opacity: 0.7;
  	-webkit-transition: opacity 0.2s ease-in; 
+}
+
+#manage_users_title{
+
+	text-align: center;
+	font-size: 2em;
+	color: white;
+	font-family: 'Shojumaru', cursive;
+}
+
+#manage_users_usn{
+
+	font-size: 1.3em;
+	width: 7.5em;
+	text-align: center;
+}
+
+#manage_users_email{
+
+	font-size: 1.3em;
+	width: 14em;
+	text-align: center;
+}
+
+#manage_users_phone{
+
+	font-size: 1.3em;
+	width: 9em;
+	text-align: center;	
+}
+
+#manage_users_name{
+
+	width: 8em;
+	font-size: 1.3em;
+	text-align: center;
+
+}
+
+#manage_users_delete{
+
+	width: 8em;
+	background-color: #ADD8E6;
+}
+
+#manage_users_table{
+
+	position: relative;
+	border-radius: 10px;
+	background-color: #C0C0C0;
+}
+
+#manage_users_table_container{
+
+	border-radius: 1px;
+	position: relative;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+#manage_users_table_heading{
+
+	font-size: 1.7em;
+}
+
+#menu_col1:hover{
+
+	background-color: grey;
 }

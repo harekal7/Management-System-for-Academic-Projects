@@ -1,6 +1,8 @@
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <title>Portal</title>
+  <link href="css/new_user.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -36,19 +38,23 @@ if (mysqli_error($con))
 
 if(mysqli_num_rows($result) == 1)
 {
-  	header("location:logout.php");
+  	//header("location:logout.php");
+  	echo "<div id=\"already\">User ".$usn." already exists</div>";
+  	echo "<br><a href=\"signup_temp.html\" id=\"back\">Go back</a>";
 }
 else
 {
 
-	$sql="INSERT INTO users (usn, passwd, email, usertype, DOB, gender, phone) VALUES
-	('$usn', '$passwd', '$email', 'user', '$dob', '$g', '$phone')";
+	$sql="INSERT INTO users (usn, passwd, email, usertype, DOB, gender, phone, name) VALUES
+	('$usn', '$passwd', '$email', 'user', '$dob', '$g', '$phone', '$name')";
 
 	if (!mysqli_query($con,$sql))
 	{
-	  die('Error: ' . mysqli_error());
+	  die('Error: ' . mysqli_error($con));
 	}
-	header("location:index.html");
+	
+	echo "<div id=\"new_user\">Your account has been created<br>Username : ".$usn."</div><br>";
+	echo "<a href=\"index.php\" id=\"login_link\">Login here</a>";
 }
 
 mysqli_close($con);

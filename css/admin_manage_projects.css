@@ -112,16 +112,17 @@ body{
 	border-radius: 10px;
 	border: 2px solid white;
 	background-color: #848484;
+	overflow: auto;
 }
 
-#notifications_col:hover, #projects_col:hover, #search_col:hover, #manage_users_col:hover, #manage_projects_col:hover{
+#notifications_col:hover, #projects_col:hover, #search_col:hover, #manage_users_col:hover, #manage_projects_col:hover, #source_request_col:hover{
 
 	background-color: black;
 	opacity: 0.7;
  	-webkit-transition: opacity 0.2s ease-in; 
 }
 
-#notifications_col, #projects_col, #search_col, #manage_users_col, #manage_projects_col{
+#notifications_col, #projects_col, #search_col, #manage_users_col, #manage_projects_col, #source_request_col{
 
 	color: white;
 	font-size: 1.1em;
@@ -133,7 +134,7 @@ body{
 	font-family: 'Nova Square', cursive;
 }
 
-#home, #projects, #manage_users, #manage_projects, #search{
+#home, #projects, #manage_users, #manage_projects, #search, #admin_requests, #source_requests{
 
 	text-decoration: none;
 	color: white;
@@ -166,4 +167,9 @@ body{
 	background-color: black;
 	opacity: 0.7;
  	-webkit-transition: opacity 0.2s ease-in; 
+}
+
+#menu_col1:hover{
+
+	background-color: grey;
 }

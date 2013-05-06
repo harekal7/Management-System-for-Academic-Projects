@@ -26,6 +26,7 @@ body{
 	width: 100%;
 	height: 4em;
 	border-bottom: 3px solid white;
+	z-index: 100;
 }
 
 #container{
@@ -68,13 +69,9 @@ body{
 	height: 3.5em;
 	width: 6em;
 	text-align: center;
-
-}
-
-#menu_col1{
-
 	font-family: 'Fredoka One', cursive;
 }
+
 
 #aboutus, #signout{
 
@@ -112,6 +109,7 @@ body{
 	border-radius: 10px;
 	border: 2px solid white;
 	background-color: #848484;
+	overflow: auto;
 }
 
 #projects_col, #search_col, #upload_col{
@@ -148,4 +146,32 @@ body{
 	background-color: black;
 	opacity: 0.7;
  	-webkit-transition: opacity 0.2s ease-in; 
+}
+
+
+#prj_title{
+
+	text-decoration: none;
+	color: white;
+	font-size: 26px;
+	position: relative;
+	margin-left: 5%;
+	margin-right: 5%;
+	top: 10px;
+	font-weight: bold;
+}
+
+#prj_description{
+
+	position: relative;
+	top: 15px;
+	font-size: 18px;
+	margin-left: 5%;
+	text-indent: 2em;
+	margin-right: 5%;
+}
+
+#menu_col1:hover{
+
+	background-color: grey;
 }

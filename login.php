@@ -17,7 +17,7 @@ if (mysqli_connect_errno($con))
 {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-
+$username = strtolower($username);
 $result = mysqli_query($con,"SELECT * FROM users WHERE usn='$username' AND passwd='$password'");
 if (mysqli_error($con))
 {
@@ -30,17 +30,18 @@ if(mysqli_num_rows($result) == 1)
 	$row = mysqli_fetch_array($result);
 	if ( $row['usertype'] == 'admin')
 	{
-		header("location:admin.php");	
+		$_SESSION['type'] = 'admin';
+		header("location:admin/admin_notifications.php");	
 	}
 	else
 	{
-		header("location:home.php");
+		$_SESSION['type'] = 'user';
+		header("location:student/student_projects.php");
 	}
 }
 else
 {
-	echo "HELLO";
-	//header("location:logout.php");
+	header("location:error.php");
 }
 mysqli_close($con);
 ?>

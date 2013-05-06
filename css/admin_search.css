@@ -76,6 +76,11 @@ body{
 	font-family: 'Fredoka One', cursive;
 }
 
+#menu_col1:hover{
+
+	background-color: grey;
+}
+
 #aboutus, #signout{
 
 	text-decoration: none;
@@ -112,16 +117,17 @@ body{
 	border-radius: 10px;
 	border: 2px solid white;
 	background-color: #848484;
+	overflow: auto;
 }
 
-#notifications_col:hover, #projects_col:hover, #search_col:hover, #manage_users_col:hover, #manage_projects_col:hover{
+#notifications_col:hover, #projects_col:hover, #search_col:hover, #manage_users_col:hover, #manage_projects_col:hover, #source_request_col:hover{
 
 	background-color: black;
 	opacity: 0.7;
  	-webkit-transition: opacity 0.2s ease-in; 
 }
 
-#notifications_col, #projects_col, #search_col, #manage_users_col, #manage_projects_col{
+#notifications_col, #project_col, #search_col, #manage_users_col, #manage_projects_col, #source_request_col{
 
 	color: white;
 	font-size: 1.1em;
@@ -133,20 +139,19 @@ body{
 	font-family: 'Nova Square', cursive;
 }
 
-#home, #projects, #manage_users, #manage_projects, #search{
+#home, #projects, #manage_users, #manage_projects, #search, #source_requests{
 
 	text-decoration: none;
 	color: white;
 }
 
 #search_col{
-
-	background-color: black;
 	text-align: center;
 	font-size: 1.1em;
 	border-radius: 5px;
-	border: 1px solid white;
+	border: 2px solid white;
 	font-family: 'Nova Square', cursive;
+	background-color: black;
 }
 
 #notifications{
@@ -170,10 +175,9 @@ body{
 
 #searching{
 
-	
 	position: relative;
 	width: 70%;
-	margin-left: 15%;
+	margin-left: 23%;
 	margin-right: 15%;
 	margin-top: 5%;
 }
@@ -197,4 +201,52 @@ body{
 	position: relative;
 	left: 10%;
 	width: 6em;
+	border-radius: 5px;
+}
+
+#search_button:hover{
+
+	background-color: rgb(81, 86, 87);
+    color: white;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    -webkit-backface-visibility: hidden;
+}
+
+#search_text{
+
+	font-size: 2em;
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 10px;
+	font-family: 'Shojumaru', cursive;
+}
+
+#search_res_for{
+
+	font-size: 1.6em;
+	font-weight: bold;
+	position: relative;
+	margin-left: 22%;
+	top: 10px;
+}
+
+
+#res{
+
+	color: white;
+	font-size: 1.7em;
+	position: relative;
+	top: 10px;
+}
+
+#res_link{
+
+	text-decoration: none;
+	font-size: 1.5em;
+	color: white;
+	font-weight: bold;
 }

@@ -68,11 +68,6 @@ body{
 	height: 3.5em;
 	width: 6em;
 	text-align: center;
-
-}
-
-#menu_col1{
-
 	font-family: 'Fredoka One', cursive;
 }
 
@@ -112,9 +107,10 @@ body{
 	border-radius: 10px;
 	border: 2px solid white;
 	background-color: #848484;
+	overflow: auto;
 }
 
-#notifications_col:hover, #projects_col:hover, #search_col:hover, #manage_users_col:hover, #manage_projects_col:hover{
+#notifications_col:hover, #projects_col:hover, #search_col:hover, #manage_users_col:hover, #manage_projects_col:hover, #source_request_col:hover{
 
 	background-color: black;
 	opacity: 0.7;
@@ -122,7 +118,7 @@ body{
 }
 
 
-#notifications_col, #projects_col, #search_col, #manage_users_col, #manage_projects_col{
+#notifications_col, #projects_col, #search_col, #manage_users_col, #manage_projects_col, #source_request_col{
 
 	color: white;
 	font-size: 1.1em;
@@ -134,7 +130,7 @@ body{
 	font-family: 'Nova Square', cursive;
 }
 
-#home, #projects, #manage_users, #manage_projects, #search{
+#home, #projects, #manage_users, #manage_projects, #search, #source_requests{
 
 	text-decoration: none;
 	color: white;
@@ -167,4 +163,54 @@ body{
 	background-color: black;
 	opacity: 0.7;
  	-webkit-transition: opacity 0.2s ease-in; 
+}
+
+
+
+#prj_title{
+
+	text-decoration: none;
+	color: white;
+	font-size: 26px;
+	position: relative;
+	margin-left: 5%;
+	margin-right: 5%;
+	top: 10px;
+	font-weight: bold;
+}
+
+#prj_description{
+
+	position: relative;
+	top: 15px;
+	font-size: 18px;
+	margin-left: 5%;
+	text-indent: 2em;
+	margin-right: 5%;
+}
+
+#admin_delete_button{
+
+	position: relative;
+	margin-left: 85%;
+}
+
+#delete{
+
+	width: 7em;
+	height: 2em;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+#delete:hover{
+
+	background-color: black;
+	opacity: 0.7;
+ 	color: white;
+}
+
+#menu_col1:hover{
+
+	background-color: grey;
 }

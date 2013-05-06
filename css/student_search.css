@@ -68,11 +68,6 @@ body{
 	height: 3.5em;
 	width: 6em;
 	text-align: center;
-
-}
-
-#menu_col1{
-
 	font-family: 'Fredoka One', cursive;
 }
 
@@ -112,6 +107,7 @@ body{
 	border-radius: 10px;
 	border: 2px solid white;
 	background-color: #848484;
+	overflow: auto;
 }
 
 #projects_col, #search_col, #upload_col{
@@ -148,4 +144,95 @@ body{
 	background-color: black;
 	opacity: 0.7;
  	-webkit-transition: opacity 0.2s ease-in; 
+}
+
+
+#searching{
+
+	position: relative;
+	width: 70%;
+	margin-left: 23%;
+	margin-right: 15%;
+	margin-top: 5%;
+}
+
+#search_name{
+
+	font-size: 1.2em;
+
+}
+
+#options{
+
+	font-size: 1.2em;
+	position: relative;
+	left: 5%;
+}
+
+#search_button{
+
+	font-size: 1.2em;
+	position: relative;
+	left: 10%;
+	width: 6em;
+	border-radius: 5px;
+}
+
+#search_button:hover{
+
+	background-color: rgb(81, 86, 87);
+    color: white;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+    -webkit-backface-visibility: hidden;
+}
+
+
+#search_text{
+
+	font-size: 2em;
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 10px;
+	font-family: 'Shojumaru', cursive;
+}
+
+#menu_col1:hover{
+
+	background-color: grey;
+}
+
+#c1:hover{
+
+	background: grey;
+}
+
+
+#search_res_for{
+
+	font-size: 1.6em;
+	font-weight: bold;
+	position: relative;
+	margin-left: 22%;
+	top: 10px;
+}
+
+
+#res{
+
+	color: white;
+	font-size: 1.7em;
+	position: relative;
+	top: 10px;
+}
+
+#res_link{
+
+	text-decoration: none;
+	font-size: 1.5em;
+	color: white;
+	font-weight: bold;
 }
